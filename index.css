@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/avenir/Avenir-Light.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(/helveticaneue-2-cufonfonts/Light.ttf);
+}
+
+@font-face {
+  font-family: myThirdFont;
+  src: url(/helveticaneue-2-cufonfonts/HelveticaNeueHv.ttf);
+  font-family: myFourtFont;
+  src: url(./helveticaneue-2-cufonfonts/HelveticaNeueUltraLightv130.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-logo img {
+  margin-bottom: -20px;
+  max-height: 170px;
+}
+
+.new-crs-text h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #4b0a3a;
+  font-family: "Poppins", sans-serif;
+}
+
+.new-crs-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.card-flip-h2 {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.about-h5 {
+  font-size: 40px;
+  color: #4b0a3a;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+
+.about-p {
+  font-size: 14px;
+}
+
+.about-k-h6 h6 {
+  font-size: 23px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  color: #4b0a3a;
+}
+
+.about-k-h6 p {
+  font-family: mySecondFont;
+  font-size: 16px;
+  color: #431132;
+}
+
+.about-schedule h6 {
+  font-size: 25px;
+  font-weight: 300;
+  color: #4b0a3a;
+  font-family: "Fraunces", serif;
+}
+
+.about-schedule a {
+  font-size: 14px;
+  color: #4b0a3a;
+  font-family: myThirdFont;
+  font-weight: 400;
+}
+
+.form-detail h1 {
+  font-size: 43px;
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  color: #613650;
+}
+
+.new-p {
+  color: #3a062a;
+}
+
+.form-detail p,
+.about-ol p {
+  font-size: 14px;
+  font-family: mySecondFont;
+}
+
+.ol-li li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ol-li li::marker {
+  font-size: 16px;
+}
+
+.form-icon span {
+  background-color: #3a062a;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-icon {
+  line-height: 0px;
+  width: 75px;
+}
+
+.form-icon i {
+  font-size: 10px;
+  color: white;
+}
+
+.fa-facebook-f {
+  font-size: 10px !important;
+}
+
+.form-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.btn-custom {
+  background-color: #4a063d;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+.form-row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.form-group.col-md-6 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.about-k-h6 p,
+.about-schedule p {
+  font-size: 14px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-family: myFirstFont;
+  color: #3a062a;
+}
+
+@media (max-width: 768px) {
+  .header-logo img {
+    margin-bottom: -21px;
+    max-height: 190px;
+  }
+  .card-flip-h2 {
+  font-size: 18px;
+}
+  .insta-head h6{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px !important;
+}
+.logo-pallete-card p{
+  font-size: 11px !important;
+}
+.l-p{
+  font-size: 12px !important;
+}
+  .accordion-body {
+    font-family: myFirstFont;
+    letter-spacing: 0.1em;
+    font-size: 12px !important;
+  }
+  .acc-h3 {
+    font-size: 18px !important;
+    font-family: mySecondFont;
+  }
+  .accordion-header h6 {
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    font-family: myFirstFont;
+    font-weight: 500;
+  }
+  .accordion-icon {
+    font-size: 13px;
+  }
+  .new-crs-text p {
+    font-size: 12px;
+  }
+
+  .new-crs-text h1,
+  .about-h5 {
+    font-size: 21px;
+  }
+
+  .about-k-h6 p,
+  .about-schedule p {
+    font-size: 12px;
+  }
+
+  .form-detail h1 {
+    font-size: 30px;
+  }
+
+  .form-detail p,
+  .about-ol p {
+    font-size: 12px;
+  }
+
+  .about-p p {
+    font-size: 12px;
+  }
+
+  .about-schedule h6 {
+    font-size: 16px;
+  }
+
+  .ol-li li::marker {
+    font-size: 10px;
+  }
+  .start-heading h1 {
+    font-size: 23px !important;
+  }
+  .start-heading p {
+    font-size: 13px !important;
+  }
+  .start-heading button {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-logo img {
+    margin-bottom: 0px;
+    max-height: 170px;
+  }
+
+  .custom-navOne {
+    position: absolute;
+    width: 100%;
+    bottom: 46%;
+    top: 25%;
+    height: 100%;
+  }
+  .form-icon2{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .foot-p{
+    padding-top: 5px;
+  }
+}
+
+/* Owl Carousel*/
+.custom-navOne {
+  position: absolute;
+  width: 100%;
+  bottom: -60px;
+  height: 100%;
+  z-index: 2;
+}
+
+@media (max-width: 991px) {
+  .custom-navOne {
+    position: absolute;
+    width: 100%;
+    bottom: -95px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .custom-navOne {
+    position: absolute;
+    width: 100%;
+    bottom: 46%;
+    top: 33%;
+    height: 100%;
+  }
+}
+
+.custom-navOne button {
+  padding: 3px 8px;
+  background: none;
+}
+
+.custom-navOne button i {
+  font-size: 15px;
+}
+
+/*  */
+
+/*  */
+.col-md-4 {
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.box-container {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.box-inner {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6 {
+  z-index: 2;
+}
+
+.box1-text,
+.box2-text,
+.box3-text,
+.box4-text,
+.box5-text,
+.box6-text {
+  transform: rotateX(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.col-md-4.active:hover .box-container {
+  transform: rotateX(180deg);
+}
+
+.box-1 {
+  background-image: url(./img/drive-download-20240807T120720Z-001/30.JPG) , url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.box-2 {
+  background-image: url(./img/drive-download-20240807T120720Z-001/44.JPEG) , url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.box-3 {
+  background-image: url(./img/drive-download-20240807T120720Z-001/10.JPEG), url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-4 {
+  background-image: url(/img/drive-download-20240807T120720Z-001/51.JPG), url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-5 {
+  background-image: url(/img/drive-download-20240807T120720Z-001/41.jpg), url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-6 {
+  background-image: url(/img/drive-download-20240807T120720Z-001/39.jpg), url('https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg?t=st=1723299968~exp=1723303568~hmac=97c602251ebea6892095a38823f7054e0f34c3d0aebb1989296db2c6a5d86dfc&w=740');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-1 h2,
+.box-2 h2,
+.box-3 h2,
+.box-4 h2,
+.box-5 h2,
+.box-6 h2 {
+  color: #fad5e8;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  */
+
+.accordion-header.active {
+  border-bottom: 1px solid #000;
+}
+.accordion-header {
+  transition: all ease-in-out;
+}
+.accordion-body {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  font-weight: 400;
+}
+.accordion-header h6 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.acc-h3 {
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/*  */
+
+/*  */
+.modal-submit-button button {
+  background-color: #8c2a29;
+}
+.start-heading button {
+  background-color: pink;
+  width: 200px;
+  color: #591e2a;
+  font-family: myFirstFont;
+}
+.start-heading h1 {
+  font-family: myThirdFont;
+  font-size: 40px;
+}
+.start-heading p {
+  font-family: myFirstFont;
+  font-size: 17px;
+}
+.start-heading button:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+.modal-submit-button:hover {
+  background-color: black;
+}
+/*  */
+.foot-p {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+/*  */
+
+.logo-pallete-card p{
+  font-family:  "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a293d;
+
+}
+.logo-pallete-card{
+  min-height: 180px;
+}
+.l-p{
+  font-size: 15px;
+  font-family:  "Poppins", sans-serif;
+  font-weight: 600;
+  color: #4a293d;
+
+}
+.box-inner p{
+  font-weight: 500;
+  color: #da518d;
+}
+.fa-whatsapp{
+  font-size: 12px !important;
+}
+/*  */
+
+.insta-head hr{
+  width: 40%;
+}
+.insta-head h6{
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: #4a293d;
+}
