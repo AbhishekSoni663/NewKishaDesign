@@ -14,6 +14,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <title>Document</title>
   </head>
 
@@ -429,37 +442,38 @@
                 <form id="contactForm">
                   <div class="form-row d-flex flex-wrap">
                     <div class="form-group px-2 col-12">
-                      <label for="Full Name" class="mb-1">Full Name</label>
+                      <label for="firstName" class="mb-1">Full Name</label>
                       <input
                         type="text"
                         placeholder="Enter First Name"
                         class="form-control rounded-0 py-1 mt-0 bg-transparent"
                         id="firstName"
                         style="border: 1px solid #3a062a"
+                        required
                       />
                     </div>
                   </div>
                   <div class="form-row d-flex flex-wrap">
                     <div class="form-group col-12 px-2">
-                      <label for="Contact Number" class="mb-1"
-                        >Contact Info</label
-                      >
+                      <label for="contact" class="mb-1">Contact Info</label>
                       <input
                         type="number"
                         placeholder="Enter Your Phone Number"
                         class="form-control rounded-0 py-1 mt-0 bg-transparent"
                         id="contact"
                         style="border: 1px solid #3a062a"
+                        required
                       />
                     </div>
                     <div class="form-group col-12 px-2">
-                      <label for="lastName" class="mb-1">Email Address</label>
+                      <label for="email" class="mb-1">Email Address</label>
                       <input
                         type="email"
                         placeholder="Enter your Email"
                         class="form-control rounded-0 py-1 mt-0 bg-transparent"
                         id="email"
                         style="border: 1px solid #3a062a"
+                        required
                       />
                     </div>
                   </div>
@@ -471,11 +485,15 @@
                         id="message"
                         rows="4"
                         style="border: 1px solid #3a062a"
+                        required
                       ></textarea>
                     </div>
                   </div>
                   <div class="modal-submit-button">
-                    <button class="btn text-light rounded-0 shadow-none w-100">
+                    <button
+                      type="submit"
+                      class="btn text-light rounded-0 shadow-none w-100"
+                    >
                       Submit
                     </button>
                   </div>
@@ -631,38 +649,71 @@
         });
       });
     </script>
- <script>
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the default form submission
 
-      const formData = {
-        name: document.getElementById('firstName').value,
-        email: document.getElementById('email').value,
-        contact: document.getElementById('contact').value,
-        message: document.getElementById('message').value,
-      };
+    <script>
+      // Initialize EmailJS with your User ID
+      (function () {
+        emailjs.init("Ot2YAGfdJiIHd66b7"); // Replace with your actual User ID
+      })();
 
-      fetch('https://kisha-api.onrender.com/send-email', { // Update with your deployed API URL
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.error) {
-          alert('Failed to send email: ' + data.error);
-        } else {
-          alert('Email sent successfully!');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending the email.');
-      });
-    });
-  </script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const formData = {
+            name: document.getElementById("firstName").value,
+            email: document.getElementById("email").value,
+            contact: document.getElementById("contact").value,
+            message: document.getElementById("message").value,
+          };
+
+          // Basic email validation
+          if (!validateEmail(formData.email)) {
+            Toastify({
+              text: "Invalid email address",
+              duration: 3000,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "#dc3545",
+            }).showToast();
+            return;
+          }
+
+          // Send email using EmailJS
+          emailjs
+            .send("service_bkiyws6", "template_onmmpcd", formData) // Replace with your actual Service ID and Template ID
+            .then(
+              (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                Toastify({
+                  text: "Email sent successfully!",
+                  duration: 3000,
+                  gravity: "top",
+                  position: "right",
+                  backgroundColor: "#28a745",
+                }).showToast();
+                document.getElementById("contactForm").reset();
+              },
+              (error) => {
+                console.error("FAILED...", error);
+                Toastify({
+                  text: "Failed to send email: " + error.text,
+                  duration: 3000,
+                  gravity: "top",
+                  position: "right",
+                  backgroundColor: "#dc3545",
+                }).showToast();
+              }
+            );
+        });
+
+      // Function to validate email format
+      function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
     <!--  -->
   </body>
 </html>
